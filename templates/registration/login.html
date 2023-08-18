@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} About Us {% endblock title %}
+
+{% block content %}
+
+<h1>Login</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+</form>
+<p>You are now logged in.</p>
+<p><a href="{% url 'home' %}">Click Here</a> to go home.</p>
+{% endblock content %}
