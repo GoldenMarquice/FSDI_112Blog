@@ -14,7 +14,7 @@ from django.contrib.auth.mixins import(
 )
 
 class PostListView(ListView):
-    template_name = "posts/list.html"
+    template_name = "posts/lists.html"
     model = Post
 
 class PostDetailView(DetailView):
@@ -24,7 +24,11 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     template_name = "posts/new.html"
     model = Post
-    feilds = ["title", "subtitle", "author", "body"]
+    feilds = ["title", "subtitle", "body"]
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid
 
 class PostUpdatetView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = "posts/edit.html"

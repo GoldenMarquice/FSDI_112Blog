@@ -8,7 +8,12 @@
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
+    <input type="submit" class="btn btn-success" value="Log In">
 </form>
-<p>You are now logged in.</p>
-<p><a href="{% url 'home' %}">Click Here</a> to go home.</p>
+
+
+
+<small> Did you forget your password? 
+    <a href="{% url 'password_change_form' %}"> Forgotten your password or username? Click here to reset it.</a>
+ </small>
 {% endblock content %}
