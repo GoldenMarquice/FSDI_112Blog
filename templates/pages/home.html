@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
-
-{% block title %} Home {% endblock title%}
+{% block title %} Street Fighter Blog{% endblock title%}
 
 
 {% block content%}
-<h1>Home</h1>
-<p>Welcome to my home page.</p>
+<h1>Home of Street Fighters</h1>
+<p>Welcome to my Street Fighter Blog</p>
 
+<div class="card-image">
+<img src="{% static 'img/vega.jpeg' %}" class="center-image" alt="Street Fighter Image">
+</div>
 
 {% endblock content %}

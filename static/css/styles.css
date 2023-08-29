@@ -1,0 +1,30 @@
+body{
+    background-color: antiquewhite;
+}
+
+.card-image{
+    background: black;
+
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto; /* Horizontal centering */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    text-align: center; /* Center the image within its parent */
+    margin-top: 20vh; /* Vertical centering using viewport height units */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

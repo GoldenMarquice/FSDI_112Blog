@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} About Us {% endblock title %}
 
 {% block content %}
+<div class="container">
+    <h1>About Us</h1>
+    <p>Fans of the street fighter series</p>
 
-<h1>About Us</h1>
-<p>We are Blogface Inc. and we are all about blogs.</p>
+    <div class="slideshow-container">
+        <div class="slide">
+            <img src="{% static 'img/Sonya.jpeg' %}" class="center-image" alt="Street Fighter Image">
+        </div>
+    </div>
 
+</div>
 {% endblock content %}
